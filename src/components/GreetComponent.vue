@@ -12,14 +12,12 @@ async function greet() {
 </script>
 
 <template>
-  <form
-    class="row"
-    @submit.prevent="greet"
-  >
+  <form @submit.prevent="greet">
     <input
       id="greet-input"
       v-model="name"
       placeholder="Enter a name..."
+      class="bg-red-500"
     />
     <button type="submit">Greet</button>
   </form>
