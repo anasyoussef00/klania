@@ -2,6 +2,8 @@
   "*.vue": ["prettier --write", "eslint"],
   "*.ts": ["prettier --write", "eslint"],
   "*.js": ["prettier --write", "eslint"],
+  "*.cjs": ["prettier --write", "eslint"],
   "*.html": ["prettier --write", "eslint"],
-  "*.css": "prettier --write"
+  "*.css": "prettier --write",
+  "*.json": "prettier --write"
 }
