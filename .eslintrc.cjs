@@ -1,11 +1,16 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    node: true,
+  },
   extends: [
     // add more generic rulesets here, such as:
     'eslint:recommended',
     'plugin:vue/vue3-strongly-recommended',
     'prettier',
   ],
+  plugins: ['@typescript-eslint'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -15,5 +20,7 @@ module.exports = {
   rules: {
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/ban-types': 'error',
   },
 };
