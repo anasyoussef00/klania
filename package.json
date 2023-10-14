@@ -1,17 +1,20 @@
 {
   "name": "klania",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@tauri-apps/api": "^1.5.0",
     "vue": "^3.3.4",
-    "@tauri-apps/api": "^1.5.0"
+    "vue-router": "latest"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.5.0",
@@ -21,6 +24,8 @@
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vue": "^9.17.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.4",
