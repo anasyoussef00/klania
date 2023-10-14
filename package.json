@@ -1,8 +1,14 @@
 {
   "name": "klania",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
+  "author": {
+    "name": "Anas Youssef El Mahdad",
+    "email": "anasyoussef.elmahdad00@proton.me",
+    "url": "https://github.com/anasyoussef00"
+  },
+  "repository": "https://github.com/anasyoussef00/klania",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

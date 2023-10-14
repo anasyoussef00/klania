@@ -1,10 +1,10 @@
 [package]
 name = "klania"
-version = "0.0.0"
+version = "0.2.0"
 description = "A Tauri App"
-authors = ["you"]
+authors = ["anasyoussef00"]
 license = ""
-repository = ""
+repository = "https://github.com/anasyoussef00/klania"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -13,11 +13,16 @@ edition = "2021"
 tauri-build = { version = "1.5", features = [] }
 
 [dependencies]
-tauri = { version = "1.5", features = ["shell-open"] }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
+tauri = { version = "1.5.2", features = ["shell-open"] }
+serde = { version = "1.0.189", features = ["derive"] }
+serde_json = "1.0.107"
+tokio = { version = "1.33.0", features = ["rt", "macros"] }
+sqlx = { version = "0.7", features = ["runtime-tokio", "sqlite", "migrate"] }
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
 # DO NOT REMOVE!!
 custom-protocol = ["tauri/custom-protocol"]
+
+[profile.dev]
+incremental = true
