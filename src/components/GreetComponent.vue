@@ -17,7 +17,6 @@ async function greet() {
       id="greet-input"
       v-model="name"
       placeholder="Enter a name..."
-      class="bg-red-500"
     />
     <button type="submit">Greet</button>
   </form>

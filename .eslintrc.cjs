@@ -8,7 +8,14 @@ module.exports = {
     // add more generic rulesets here, such as:
     'eslint:recommended',
     'plugin:vue/vue3-strongly-recommended',
+    'plugin:tailwindcss/recommended',
     'prettier',
+  ],
+  overrides: [
+    {
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+    },
   ],
   plugins: ['@typescript-eslint'],
   parser: 'vue-eslint-parser',
