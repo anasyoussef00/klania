@@ -35,16 +35,22 @@ impl Db {
             .await?)
     }
 
+    async fn migrate(conn: &SqlitePool) -> sqlx::Result<()> {
+        Ok(sqlx::migrate!().run(conn).await?)
+    }
+
     pub async fn init(&self, app_handle: &AppHandle) -> SqlitePool {
         let db_url = self
             .get_db_url(app_handle)
             .await
             .expect("Could not retrieve DB URL!");
 
-        let connection = Self::connect(db_url.as_str())
+        let conn = Self::connect(db_url.as_str())
             .await
             .expect("Could not create a connection!");
 
-        connection
+        Self::migrate(&conn).await.expect("Could not migrate!");
+
+        conn
     }
 }
